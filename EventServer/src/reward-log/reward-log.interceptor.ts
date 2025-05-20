@@ -15,10 +15,7 @@ import { RewardLogService } from './reward-log.service';
  */
 @Injectable()
 export class RewardLogger implements NestInterceptor {
-  constructor(
-    @InjectModel(RewardLogEntity.name)
-    private readonly rewardLogService: RewardLogService,
-  ) {}
+  constructor(private readonly rewardLogService: RewardLogService) {}
 
   intercept(
     context: ExecutionContext,
